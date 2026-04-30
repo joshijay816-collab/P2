@@ -1,0 +1,11 @@
+width=float(input("enter width"))
+height=float(input(enter height"))
+Area=width*height
+print(f'area rectangle is,Area)
+base=float(input("enter base"))
+height=float(input("enter height"))
+Area= 1.5*base*height
+print(f' area triangle is:'Area))
+radius=float(input("enter radius")
+Area=3.1459*radius*radius
+print(f' area radius is', Area)
