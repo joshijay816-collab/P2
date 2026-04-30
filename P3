@@ -1,0 +1,23 @@
+Disamount=float(0)
+Finalamount=float(0)
+pounds=float(input("numbers of pounds to be purchased")
+if pounds>=0:
+Grossales=pounds*0.99
+if pounds>=10 and pounds<=99.99:
+Disamount=Grossales*0.10
+Finalamount=Grossales-Disamount
+elif pounds>=100 and poundds<=999.99
+Disamount=Grossales*0.20
+Finalamount=Grossale-Disamount
+elif pounds>=1000 and pounds<=9999.99:
+Disamount=Grossales*0.30
+Finalamount=Grossales-Disamount
+elif pounds>=10000:
+Disamount=Grossales*0.40
+Finalamount=Grossales-Disamount
+
+else:
+print("pounds cannot be negative")
+print("number of pounds:"Grossales)
+print("Discount:",Disamount)
+print("Final amount:",Finalamount)
