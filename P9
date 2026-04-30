@@ -1,0 +1,60 @@
+def acres_to_hectares():
+    """
+    Converts a given area in acres to hectares.
+    Args:
+    Acres: The area in acres (float  or int).
+    """
+    try:
+        acres=float(input("Enter to acres:"))
+        if acres<0:
+            print("Negative values are not allowed. Please try again.")
+        else:
+            conversion_factor = 0.404686
+            hectares = acres * conversion_factor
+            print(acres, " converts to ", hectares)
+    except ValueError:
+        print("Invalid input. Please enter a numerical value.")
+
+
+def quarts_to_liters():
+    """
+    Converts a given volume in US liquid quarts to liters.
+    1 US quart = 0.946353 liters
+    """
+    try:
+        quarts=float(input("Enter to quarts"))
+        if quarts<0:
+            print("Negative values are not allowed. Please try agian.")
+        else:
+            conversion_factor=0.946353
+            liters=quarts*0.946353
+            print(quarts,"converts to", liters)
+    except ValueError:
+        print("Invalid input. Please enter a numerical value.")
+
+
+def fahrenheit_to_kelivn():
+    """
+    Args:
+    temp_f: The temperature in Fahrenheit (float or int).
+    Returns:
+    The temperature in Kelvin (float).
+    """
+    try:
+        fahrenheit=float(input("Enter to Fahrenheit"))
+        temp_k=((fahrenheit -32) * (5/9)) + 273.15
+        print (fahrenheit,"coverts to",temp_k)
+    except ValueError:
+        print("Invalid input.Please enter a numerical value")
+
+while True:
+    print("program running")
+
+    acres_to_hectares()
+    quarts_to_liters()
+    fahrenheit_to_kelivn()
+    user_input=input("Enter n to quit or y to run again: ")
+    if user_input.lower() == 'n':
+        break
+
+print("Program ended.")
