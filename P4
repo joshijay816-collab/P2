@@ -1,0 +1,44 @@
+name=input('Name:')
+if name.strip()=='': 
+    name_w='Name cannot be blank'
+else: 
+    name=name.strip()
+if not name.isalpha(): 
+    name_w='Name must be alphabetic'
+elif len (name)<3: 
+    name_w='Name to short'
+else: 
+    name_w='valid'
+
+acn=input('Account Number')
+if acn.strip()=='': 
+    acn_w="Account Number cannot be blank"
+else: 
+    acn=acn.strip()
+if acn.isalpha(): 
+    acn_w='Account number must be numeric'
+elif len(acn) !=9: 
+    acn_w='Account number must be 9 digits'
+else:  
+    acn_w='valid'
+
+pay=input('Payment')
+if pay.strip()=='': 
+    pay_w='Payment cannot be blank'
+else: 
+    try: 
+        payment=float(pay) 
+        if payment==0: 
+            pay_w='Payment cannot be zero' 
+        elif payment<0: 
+            pay_w='Payment caanot be negative' 
+        else: 
+            pay_w='valid' 
+    except: 
+        pay_w='Payment cannot be blank'
+
+
+print('\n'*3)
+print(f"Name:{name}{name_w}")
+print(f"Account number:{acn}{acn_w}")
+print(f"Payment:{pay}{pay_w}")
