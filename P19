@@ -1,0 +1,11 @@
+from tkinter import*
+def main():
+    print('-->start<--')
+    mainwin=Tk()
+    wcan=Canvas(mainwin,bg='yellow',width=600,height=800)
+    wcan.pack()
+    wcan.create_oval(100,100,200,200,fill='orange',outline="black",width=5)
+    wcan.create_oval(350,350,450,400,
+                     fill='orange',outline="black",width=5)
+    mainwin.mainloop()
+main()
