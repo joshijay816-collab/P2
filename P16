@@ -1,0 +1,16 @@
+def countdown(a):
+    print('----',a,'----')
+    if(a>0): 
+        a=a-1
+        countdown(a)
+    return
+def process():
+    cnt=int(input('enter a postive whole number:'))  
+    countdown(cnt) 
+    return
+def recur1():
+   ans='Y'
+   while ans.upper()=='Y':
+        process()
+        ans=input('run agian y/n:')
+recur1()
