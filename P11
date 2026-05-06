@@ -1,0 +1,48 @@
+from datetime import date
+from datetime import time
+from datetime import datetime
+def logpgm(logfile,cond):
+    dt=datetime.today()
+    dts=str(dt)+'\n'
+    if cond==0:
+        ps='program started'+'\n'
+    else:
+        ps='program endend'+'\n'
+        logfile.write(ps)
+        logfile.write(dts)
+        return
+def openfiles():
+    filein='C:/data/ptest/testfile7.txt'
+    datafilein=open(filein,'r')
+    fileout='C:/data/ptest/testfile7.txt'
+    datafileout1=open(fileout,'w')
+    filelg= 'C:/data/ptest/testfile7log.txt'
+    datafileout2=open(filelg,'w')
+    return(datafilein,datafileout1,datafileout2)
+def closefiles(fi,fo,fg):
+    fi.close()
+    fo.close()
+    fg.close()
+    return
+def main():
+    (infile,outfile,logfile)=openfiles()
+    logpgm(logfile,0)
+    line=''
+    newline=''
+    rcdcnt=0
+    line=infile.readline()
+    while line !='':
+        print(line)
+        a,b,c,d=line.split(',')
+        print('A is:'+a)
+        print('B is:'+b)
+        print('C is:'+c)
+        print('D is:'+d)
+        line=infile.readline()
+        rcdcnt=rcdcnt+1
+        newline=a+','+d
+        outfile.write(newline)
+    print('number of records:',rcdcnt)
+    logpgm(logfile,0)
+    closefiles(infile,outfile,logfile)
+main()
