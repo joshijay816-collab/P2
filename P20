@@ -1,0 +1,13 @@
+from turtle import*
+import time
+def main():
+    setup(width=800,height=250)
+    bgcolor('yellow')
+    begin_fill()
+    forward(100)
+    right(90)
+    forward(100)
+    home()
+    time.sleep(60)
+    bye()
+main()
