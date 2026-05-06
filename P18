@@ -1,0 +1,25 @@
+from random import choice 
+from tkinter import *
+def changecolor(event):
+    global colorlist,colorindex,window
+    if colorindex !="":
+        colorlist.pop(colorlist.index(colorindex))
+        colorchoice=choice(colorlist)
+        colorlist.append(colorindex)
+    else:
+      colorchoice=choice(colorlist)
+    winmain['bg']=colorchoice
+    colorindex=colorchoice
+    return
+def gui50d():
+   global colorlist,colorindex,winmain
+   colorlist=['red' 'yellow' 'green' 'azure', "blue", "coral", "gold", "purple",  "pink"]
+   winmain=Tk()
+   winmain.title("window")
+   winmain.geometry("800x600+200+200")
+   colorindex=''
+   label=Label(winmain,text="Click where you want to change color",font=("Arial Bold",25))
+   label.pack(fill=BOTH)
+   winmain.bind("<Button>",changecolor)
+   mainloop()
+gui50d()
