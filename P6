@@ -1,0 +1,12 @@
+ans='y'
+calories=4.33
+counter=5
+while((ans=='y')or(ans=='y')):
+    minutes=float(input('enter running minutes'))
+    if minutes <5:
+        print("must be greater than 5")
+    else:
+        while counter <= minutes:
+            print("minutes:",counter,"  calories:",counter*calories)
+            counter=counter+5
+    ans=input('\nContinue y/n ->')
